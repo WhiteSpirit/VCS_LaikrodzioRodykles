@@ -1,4 +1,4 @@
-package lt.balt;
+package lt.balt.vcs_laikrodzio_rodykles;
 
 class ValandineRodykle extends LaikrodzioRodykle {
 
@@ -12,7 +12,7 @@ class ValandineRodykle extends LaikrodzioRodykle {
 		this(0);
 	}
 
-	double skaiciuotiKampaTarpVertikalesIrRodykles(double valandos) {
+	double skaiciuotiKampaTarpVertikalesIrRodykles() {
 		double laipsniai;
 		if (valandos < RodyklinisLaikrodis.VAL_SKAICIUS_VIENAME_RATE) {
 			laipsniai = valandos * (RodyklinisLaikrodis.MAX_KAMPAS / RodyklinisLaikrodis.VAL_SKAICIUS_VIENAME_RATE);

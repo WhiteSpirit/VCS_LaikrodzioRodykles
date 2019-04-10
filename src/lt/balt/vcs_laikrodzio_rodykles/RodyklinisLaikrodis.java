@@ -1,4 +1,4 @@
-package lt.balt;
+package lt.balt.vcs_laikrodzio_rodykles;
 
 class RodyklinisLaikrodis {
 
@@ -10,7 +10,7 @@ class RodyklinisLaikrodis {
 	private MinutineRodykle minutineRodykle;
 
 	RodyklinisLaikrodis(double valandos, double minutes) {
-		this.valandineRodykle = new ValandineRodykle(valandos);
+		this.valandineRodykle = new ValandineRodykle(valandos + minutes / MIN_SKAICIUS_VALANDOJE);
 		this.minutineRodykle = new MinutineRodykle(minutes);
 	}
 
@@ -21,10 +21,9 @@ class RodyklinisLaikrodis {
 	double skaiciuotiKampaTarpLaikrodzioRodykliu() {
 		double laipsniai;
 
-		double kampasTarpVertikalesIrValRodykles = this.valandineRodykle.skaiciuotiKampaTarpVertikalesIrRodykles(
-				this.valandineRodykle.getValandos() + (this.minutineRodykle).getMinutes() / MIN_SKAICIUS_VALANDOJE);
+		double kampasTarpVertikalesIrValRodykles = this.valandineRodykle.skaiciuotiKampaTarpVertikalesIrRodykles();
 		double kampasTarpVertikalesIrMinRodykles = this.minutineRodykle
-				.skaiciuotiKampaTarpVertikalesIrRodykles(this.minutineRodykle.getMinutes());
+				.skaiciuotiKampaTarpVertikalesIrRodykles();
 
 		if (kampasTarpVertikalesIrMinRodykles >= kampasTarpVertikalesIrValRodykles) {
 			laipsniai = Math.min((kampasTarpVertikalesIrMinRodykles - kampasTarpVertikalesIrValRodykles),

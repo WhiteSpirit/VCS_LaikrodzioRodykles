@@ -1,4 +1,4 @@
-package lt.balt;
+package lt.balt.vcs_laikrodzio_rodykles;
 
 class MinutineRodykle extends LaikrodzioRodykle {
 
@@ -12,7 +12,7 @@ class MinutineRodykle extends LaikrodzioRodykle {
 		this(0);
 	}
 
-	double skaiciuotiKampaTarpVertikalesIrRodykles(double minutes) {
+	double skaiciuotiKampaTarpVertikalesIrRodykles() {
 		double laipsniai = minutes * (RodyklinisLaikrodis.MAX_KAMPAS / RodyklinisLaikrodis.MIN_SKAICIUS_VALANDOJE);
 		return laipsniai;
 	}

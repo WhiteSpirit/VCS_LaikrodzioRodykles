@@ -1,4 +1,4 @@
-package lt.balt;
+package lt.balt.vcs_laikrodzio_rodykles;
 
 import java.util.Scanner;
 
